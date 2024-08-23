@@ -28,3 +28,8 @@ function getHumanChoice() {
     return "Invalid Input";
   }
 }
+
+// Declare The Players Score Variables
+
+let humanScore = 0;
+let computerScore = 0;
