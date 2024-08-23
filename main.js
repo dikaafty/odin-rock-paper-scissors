@@ -29,7 +29,12 @@ function getHumanChoice() {
   }
 }
 
-// Declare The Players Score Variables
+
+// Write the logic to play the entire game
+
+function playGame() {
+
+  // Declare The Players Score Variables
 
 let humanScore = 0;
 let computerScore = 0;
@@ -65,3 +70,5 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+}
