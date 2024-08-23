@@ -23,9 +23,9 @@ function getHumanChoice() {
   } else if(userInput === "paper") {
     return "Paper";
   } else if(userInput === "scissors") {
-    return "Scissors";
+    return "Scissors"; 
   } else {
-    return "Invalid Input";
+    return "Invalid Input"; // Handle invalid inputs
   }
 }
 
@@ -34,7 +34,7 @@ function getHumanChoice() {
 
 function playGame() {
 
-  // Declare The Players Score Variables
+// Declare The Players Score Variables
 
 let humanScore = 0;
 let computerScore = 0;
@@ -77,4 +77,9 @@ const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
 
+console.log("Human Score: " + `${humanScore}`);
+console.log("Computer Score: " + `${computerScore}`);
+
 }
+
+playGame();
