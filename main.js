@@ -13,4 +13,18 @@ function getComputerChoice() {
   }
 }
 
-console.log(getComputerChoice());
+// Write the logic to get human choice
+
+function getHumanChoice() {
+  let userInput = prompt("Rock Paper Scissors!").toLowerCase();
+
+  if(userInput === "rock") {
+    return "Rock";
+  } else if(userInput === "paper") {
+    return "Paper";
+  } else if(userInput === "scissors") {
+    return "Scissors";
+  } else {
+    return "Invalid Input";
+  }
+}
