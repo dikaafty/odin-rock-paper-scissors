@@ -29,11 +29,6 @@ function getHumanChoice() {
   }
 }
 
-
-// Write the logic to play the entire game
-
-function playGame() {
-
 // Declare The Players Score Variables
 
 let humanScore = 0;
@@ -72,13 +67,10 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-// Play 5 games
-for(let i = 0; i < 5; i++) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
-}
 
 console.log("Human Score: " + `${humanScore}`);
 console.log("Computer Score: " + `${computerScore}`);
@@ -92,6 +84,3 @@ if(humanScore > computerScore) {
   console.log("This Game Is a Tie!");
 }
 
-}
-
-playGame();
