@@ -74,14 +74,11 @@ rockButton.addEventListener("click", () => playRound("Rock"));
 paperButton.addEventListener("click", () => playRound("Paper"));
 scissorsButton.addEventListener("click", () => playRound("Scissors"));
 
-console.log("Human Score: " + `${humanScore}`);
-console.log("Computer Score: " + `${computerScore}`);
-
 // Declare The Winner
 if(humanScore > computerScore) {
-  console.log("Congratulations! You Are The Winner!");
+  
 } else if(computerScore > humanScore) {
-  console.log("BOOO! LOSER!");
+  
 } else {
-  console.log("This Game Is a Tie!");
+  
 }
