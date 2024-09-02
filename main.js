@@ -27,19 +27,7 @@ function getComputerChoice() {
 
 // Write the logic to get human choice
 
-function getHumanChoice() {
-  let userInput = prompt("Rock Paper Scissors!").toLowerCase();
 
-  if(userInput === "rock") {
-    return "Rock";
-  } else if(userInput === "paper") {
-    return "Paper";
-  } else if(userInput === "scissors") {
-    return "Scissors"; 
-  } else {
-    return "Invalid Input"; // Handle invalid inputs
-  }
-}
 
 // Declare The Players Score Variables
 
