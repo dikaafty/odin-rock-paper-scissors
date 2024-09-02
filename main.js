@@ -1,5 +1,17 @@
-// Write the logic to get computer choice
+// Query
+const body = document.getElementById("body");
 
+// Create Necessary Element
+const rockButton = document.createElement("button");
+const paperButton = document.createElement("button");
+const scissorsButton = document.createElement("button");
+
+// Add button text content
+rockButton.textContent = "Rock";
+paperButton.textContent = "Paper";
+scissorsButton.textContent = "Scissors";
+
+// Write the logic to get computer choice
 
 function getComputerChoice() {
   let randomNumber = Math.random();
