@@ -1,5 +1,6 @@
-// Query
+// Query and Add Var
 const body = document.getElementById("body");
+let playerChoice;
 
 // Create Necessary Element
 const rockButton = document.createElement("button");
@@ -26,8 +27,20 @@ function getComputerChoice() {
 }
 
 // Write the logic to get human choice
+rockButton.addEventListener("click", () => {
+  playerChoice = "Rock";
+  playRound();
+});
 
+paperButton.addEventListener("click", () => {
+  playerChoice = "Paper";
+  playRound();
+});
 
+scissorsButton.addEventListener("click", () => {
+  playerChoice = "Scissors";
+  playRound();
+});
 
 // Declare The Players Score Variables
 
@@ -67,7 +80,7 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const humanSelection = getHumanChoice();
+const humanSelection = playerChoice;
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
