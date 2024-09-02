@@ -5,6 +5,7 @@ const body = document.getElementById("body");
 const rockButton = document.createElement("button");
 const paperButton = document.createElement("button");
 const scissorsButton = document.createElement("button");
+const result = document.createElement("div");
 
 // Add button text content
 rockButton.textContent = "Rock";
@@ -15,6 +16,7 @@ scissorsButton.textContent = "Scissors";
 body.appendChild(rockButton);
 body.appendChild(paperButton);
 body.appendChild(scissorsButton);
+body.appendChild(result);
 
 // Write the logic to get computer choice
 
