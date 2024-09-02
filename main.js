@@ -39,8 +39,9 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
 
+  const computerSelection = getComputerChoice();
   humanChoice = humanChoice.toLowerCase();
-  computerChoice = computerChoice.toLowerCase();
+  computerChoice = computerSelection.toLowerCase();
 
   // Check for the winning conditions
   if (humanChoice === "rock" && computerChoice === "scissors") {
@@ -67,7 +68,6 @@ function playRound(humanChoice, computerChoice) {
     console.log("Invalid input"); // Handle invalid inputs
   }
 }
-const computerSelection = getComputerChoice();
 
 console.log("Human Score: " + `${humanScore}`);
 console.log("Computer Score: " + `${computerScore}`);
