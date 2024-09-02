@@ -1,6 +1,6 @@
 // Query and Add Var
 const body = document.getElementById("body");
-let playerChoice;
+let playerChoice = "";
 
 // Create Necessary Element
 const rockButton = document.createElement("button");
@@ -11,6 +11,11 @@ const scissorsButton = document.createElement("button");
 rockButton.textContent = "Rock";
 paperButton.textContent = "Paper";
 scissorsButton.textContent = "Scissors";
+
+// Add children to their parent
+body.appendChild(rockButton);
+body.appendChild(paperButton);
+body.appendChild(scissorsButton);
 
 // Write the logic to get computer choice
 
@@ -25,22 +30,6 @@ function getComputerChoice() {
     return "Scissors";
   }
 }
-
-// Write the logic to get human choice
-rockButton.addEventListener("click", () => {
-  playerChoice = "Rock";
-  playRound();
-});
-
-paperButton.addEventListener("click", () => {
-  playerChoice = "Paper";
-  playRound();
-});
-
-scissorsButton.addEventListener("click", () => {
-  playerChoice = "Scissors";
-  playRound();
-});
 
 // Declare The Players Score Variables
 
@@ -80,10 +69,8 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const humanSelection = playerChoice;
+const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
 
 console.log("Human Score: " + `${humanScore}`);
 console.log("Computer Score: " + `${computerScore}`);
@@ -96,4 +83,3 @@ if(humanScore > computerScore) {
 } else {
   console.log("This Game Is a Tie!");
 }
-
