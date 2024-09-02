@@ -69,6 +69,11 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+// Add event listener
+rockButton.addEventListener("click", () => playRound("Rock"));
+paperButton.addEventListener("click", () => playRound("Paper"));
+scissorsButton.addEventListener("click", () => playRound("Scissors"));
+
 console.log("Human Score: " + `${humanScore}`);
 console.log("Computer Score: " + `${computerScore}`);
 
