@@ -6,6 +6,7 @@ const rockButton = document.createElement("button");
 const paperButton = document.createElement("button");
 const scissorsButton = document.createElement("button");
 const result = document.createElement("div");
+const scoreBoard = document.createElement("div");
 
 // Add button text content
 rockButton.textContent = "Rock";
@@ -17,6 +18,7 @@ body.appendChild(rockButton);
 body.appendChild(paperButton);
 body.appendChild(scissorsButton);
 body.appendChild(result);
+body.appendChild(scoreBoard);
 
 // Write the logic to get computer choice
 
@@ -65,10 +67,12 @@ function playRound(humanChoice, computerChoice) {
     result.textContent = "You lose, Rock beats Scissors";
     computerScore++;
   } else if (humanChoice === computerChoice) {
-    result.textContent = "Tie!";
+    result.textContent = "Tie! both chose " + `${humanChoice}`;
   } else {
     result.textContent = "Invalid input"; // Handle invalid inputs
   }
+
+  scoreBoard.textContent = `You : ${humanScore} Computer : ${computerScore}`;
 }
 
 // Add event listener
