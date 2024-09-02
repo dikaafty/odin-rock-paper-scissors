@@ -47,27 +47,27 @@ function playRound(humanChoice, computerChoice) {
 
   // Check for the winning conditions
   if (humanChoice === "rock" && computerChoice === "scissors") {
-    console.log("You win, Rock beats Scissors");
+    result.textContent = "You win, Rock beats Scissors";
     humanScore++;
   } else if (humanChoice === "paper" && computerChoice === "rock") {
-    console.log("You win, Paper beats Rock");
+    result.textContent = "You win, Paper beats Rock";
     humanScore++;
   } else if (humanChoice === "scissors" && computerChoice === "paper") {
-    console.log("You win, Scissors beats Paper");
+    result.textContent = "You win, Scissors beats Paper";
     humanScore++;
   } else if (humanChoice === "rock" && computerChoice === "paper") {
-    console.log("You lose, Paper beats Rock");
+    result.textContent = "You lose, Paper beats Rock";
     computerScore++;
   } else if (humanChoice === "paper" && computerChoice === "scissors") {
-    console.log("You lose, Scissors beats Paper");
+    result.textContent = "You lose, Scissors beats Paper";
     computerScore++;
   } else if (humanChoice === "scissors" && computerChoice === "rock") {
-    console.log("You lose, Rock beats Scissors");
+    result.textContent = "You lose, Rock beats Scissors";
     computerScore++;
   } else if (humanChoice === computerChoice) {
-    console.log("Tie!");
+    result.textContent = "Tie!";
   } else {
-    console.log("Invalid input"); // Handle invalid inputs
+    result.textContent = "Invalid input"; // Handle invalid inputs
   }
 }
 
@@ -75,12 +75,3 @@ function playRound(humanChoice, computerChoice) {
 rockButton.addEventListener("click", () => playRound("Rock"));
 paperButton.addEventListener("click", () => playRound("Paper"));
 scissorsButton.addEventListener("click", () => playRound("Scissors"));
-
-// Declare The Winner
-if(humanScore > computerScore) {
-  
-} else if(computerScore > humanScore) {
-  
-} else {
-  
-}
