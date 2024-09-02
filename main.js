@@ -1,6 +1,5 @@
 // Query and Add Var
 const body = document.getElementById("body");
-let playerChoice = "";
 
 // Create Necessary Element
 const rockButton = document.createElement("button");
@@ -68,8 +67,6 @@ function playRound(humanChoice, computerChoice) {
     console.log("Invalid input"); // Handle invalid inputs
   }
 }
-
-const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 console.log("Human Score: " + `${humanScore}`);
