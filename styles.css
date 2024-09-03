@@ -62,3 +62,11 @@ header h1 {
   display: flex;
   gap: 100px;
 }
+
+.score-box {
+  text-align: center;
+}
+
+#sign {
+  font-size: 80px;
+}
