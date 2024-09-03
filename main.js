@@ -5,10 +5,6 @@ const fireBtn = document.querySelector(".fire-btn");
 const resultDesc = document.querySelector(".choose-weapon");
 const resultBeat = document.querySelector(".beat");
 
-// Add children to their parent
-body.appendChild(result);
-body.appendChild(scoreBoard);
-
 // Write the logic to get computer choice
 
 function getComputerChoice() {
