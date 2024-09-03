@@ -15,11 +15,11 @@ function getComputerChoice() {
   let randomNumber = Math.random();
 
   if(randomNumber < 1/3) {
-    return "Rock";
+    return "Water";
   } else if (randomNumber < 2/3) {
-    return "Paper";
+    return "Earth";
   } else {
-    return "Scissors";
+    return "Fire";
   }
 }
 
@@ -37,23 +37,23 @@ function playRound(humanChoice, computerChoice) {
   computerChoice = computerSelection.toLowerCase();
 
   // Check for the winning conditions
-  if (humanChoice === "rock" && computerChoice === "scissors") {
-    result.textContent = "You win, Rock beats Scissors";
+  if (humanChoice === "water" && computerChoice === "fire") {
+    result.textContent = "You win, Water beats Fire";
     humanScore++;
-  } else if (humanChoice === "paper" && computerChoice === "rock") {
-    result.textContent = "You win, Paper beats Rock";
+  } else if (humanChoice === "earth" && computerChoice === "water") {
+    result.textContent = "You win, Earth beats Water";
     humanScore++;
-  } else if (humanChoice === "scissors" && computerChoice === "paper") {
-    result.textContent = "You win, Scissors beats Paper";
+  } else if (humanChoice === "fire" && computerChoice === "earth") {
+    result.textContent = "You win, Fire beats Earth";
     humanScore++;
-  } else if (humanChoice === "rock" && computerChoice === "paper") {
-    result.textContent = "You lose, Paper beats Rock";
+  } else if (humanChoice === "water" && computerChoice === "earth") {
+    result.textContent = "You lose, Water is beaten by Earth";
     computerScore++;
-  } else if (humanChoice === "paper" && computerChoice === "scissors") {
-    result.textContent = "You lose, Scissors beats Paper";
+  } else if (humanChoice === "earth" && computerChoice === "fire") {
+    result.textContent = "You lose, Earth is beaten by Fire";
     computerScore++;
-  } else if (humanChoice === "scissors" && computerChoice === "rock") {
-    result.textContent = "You lose, Rock beats Scissors";
+  } else if (humanChoice === "fire" && computerChoice === "water") {
+    result.textContent = "You lose, Fire is beaten by Water";
     computerScore++;
   } else if (humanChoice === computerChoice) {
     result.textContent = "Tie! both chose " + `${humanChoice}`;
@@ -65,6 +65,6 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // Add event listener
-rockButton.addEventListener("click", () => playRound("Rock"));
-paperButton.addEventListener("click", () => playRound("Paper"));
-scissorsButton.addEventListener("click", () => playRound("Scissors"));
+waterBtn.addEventListener("click", () => playRound("Water"));
+earthBtn.addEventListener("click", () => playRound("Earth"));
+fireBtn.addEventListener("click", () => playRound("Fire"));
