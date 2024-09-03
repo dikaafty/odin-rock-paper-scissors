@@ -1,10 +1,7 @@
 // Query and Add Var
-const body = document.getElementById("body");
-
-// Create Necessary Element
-const rockButton = document.createElement("button");
-const paperButton = document.createElement("button");
-const scissorsButton = document.createElement("button");
+const waterBtn = document.querySelector(".water-btn");
+const earthBtn = document.querySelector(".earth-btn");
+const fireBtn = document.querySelector(".fire-btn");
 const result = document.createElement("div");
 const scoreBoard = document.createElement("div");
 
