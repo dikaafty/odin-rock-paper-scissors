@@ -10,3 +10,12 @@ body {
   background-color: #111111;
   color: whitesmoke;
 }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 120px;
+  background-color: #090909;
+}
