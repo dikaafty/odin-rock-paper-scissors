@@ -69,7 +69,8 @@ header h1 {
 
 #sign {
   font-size: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 3px white;
 }
 
 .score-box p {
