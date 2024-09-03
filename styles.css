@@ -59,4 +59,6 @@ header h1 {
 
 .decision-container {
   margin-top: 40px;
+  display: flex;
+  gap: 100px;
 }
