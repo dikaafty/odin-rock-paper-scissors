@@ -91,6 +91,15 @@ header h1 {
   border-radius: 10px;
 }
 
+.button-container button:hover {
+  background-color: #2e2c2c;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-container button:active {
+  box-shadow: 0 0 5px white;
+}
+
 #water-icon {
   width: 42px;
 }
