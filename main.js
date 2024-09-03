@@ -34,25 +34,32 @@ function playRound(humanChoice, computerChoice) {
 
   // Check for the winning conditions
   if (humanChoice === "water" && computerChoice === "fire") {
-    result.textContent = "You win, Water beats Fire";
+    resultDesc.textContent = "You won!";
+    resultBeat.textContent = `${humanChoice} beats ${computerChoice}`;
     humanScore++;
   } else if (humanChoice === "earth" && computerChoice === "water") {
-    result.textContent = "You win, Earth beats Water";
+    resultDesc.textContent = "You won!";
+    resultBeat.textContent = `${humanChoice} beats ${computerChoice}`;
     humanScore++;
   } else if (humanChoice === "fire" && computerChoice === "earth") {
-    result.textContent = "You win, Fire beats Earth";
+    resultDesc.textContent = "You won!";
+    resultBeat.textContent = `${humanChoice} beats ${computerChoice}`;
     humanScore++;
   } else if (humanChoice === "water" && computerChoice === "earth") {
-    result.textContent = "You lose, Water is beaten by Earth";
+    resultDesc.textContent = "You lost!";
+    resultBeat.textContent = `${humanChoice} is beaten by ${computerChoice}`;
     computerScore++;
   } else if (humanChoice === "earth" && computerChoice === "fire") {
-    result.textContent = "You lose, Earth is beaten by Fire";
+    resultDesc.textContent = "You lost!";
+    resultBeat.textContent = `${humanChoice} is beaten by ${computerChoice}`;
     computerScore++;
   } else if (humanChoice === "fire" && computerChoice === "water") {
-    result.textContent = "You lose, Fire is beaten by Water";
+    resultDesc.textContent = "You lost!";
+    resultBeat.textContent = `${humanChoice} is beaten by ${computerChoice}`;
     computerScore++;
   } else if (humanChoice === computerChoice) {
-    result.textContent = "Tie! both chose " + `${humanChoice}`;
+    resultDesc.textContent = "Tie!";
+    resultBeat.textContent = `both chose ${computerChoice}`;
   } else {
     result.textContent = "Invalid input"; // Handle invalid inputs
   }
