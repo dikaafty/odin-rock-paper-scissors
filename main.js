@@ -6,6 +6,8 @@ const resultDesc = document.querySelector(".choose-weapon");
 const resultBeat = document.querySelector(".beat");
 const scoreBoardPlayer = document.querySelector(".player-score");
 const scoreBoardCom = document.querySelector(".com-score");
+const playerSign = document.getElementById("player-sign");
+const comSign = document.getElementById("com-sign");
 
 // Write the logic to get computer choice
 
@@ -68,6 +70,34 @@ function playRound(humanChoice, computerChoice) {
 
   scoreBoardPlayer.textContent = humanScore;
   scoreBoardCom.textContent = computerScore;
+  updateChoices(humanChoice, computerChoice);
+}
+
+// Add Update Image Choices
+function updateChoices(humanChoice, computerChoice) {
+  switch(humanChoice) {
+    case "water":
+      playerSign.setAttribute("class", "fa-solid fa-droplet")
+      break
+    case "earth":
+      playerSign.setAttribute("class", "fa-solid fa-earth-europe")
+      break
+    case "fire":
+      playerSign.setAttribute("class", "fa-solid fa-fire")
+      break
+  }
+
+  switch(computerChoice) {
+    case "water":
+      comSign.setAttribute("class", "fa-solid fa-droplet")
+      break
+    case "earth":
+      comSign.setAttribute("class", "fa-solid fa-earth-europe")
+      break
+    case "fire":
+      comSign.setAttribute("class", "fa-solid fa-fire")
+      break
+  }
 }
 
 // Add event listener
