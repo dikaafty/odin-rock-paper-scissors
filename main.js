@@ -6,9 +6,6 @@ const result = document.createElement("div");
 const scoreBoard = document.createElement("div");
 
 // Add children to their parent
-body.appendChild(rockButton);
-body.appendChild(paperButton);
-body.appendChild(scissorsButton);
 body.appendChild(result);
 body.appendChild(scoreBoard);
 
