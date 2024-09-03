@@ -2,8 +2,8 @@
 const waterBtn = document.querySelector(".water-btn");
 const earthBtn = document.querySelector(".earth-btn");
 const fireBtn = document.querySelector(".fire-btn");
-const result = document.createElement("div");
-const scoreBoard = document.createElement("div");
+const resultDesc = document.querySelector(".choose-weapon");
+const resultBeat = document.querySelector(".beat");
 
 // Add children to their parent
 body.appendChild(result);
