@@ -112,3 +112,15 @@ header h1 {
 #earth-icon {
   font-size: 42px;
 }
+
+footer {
+  height: 70px;
+  background-color: #090909;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 20px;
+}
