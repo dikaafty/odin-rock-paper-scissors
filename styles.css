@@ -46,3 +46,8 @@ header h1 {
   align-items: center;
   height: 60vh;
 }
+
+.choose-weapon {
+  font-size: 30px;
+  margin-top: 40px;
+}
