@@ -25,3 +25,8 @@ header h1 {
   font-family: "Press Start 2P";
   font-weight: bold;
 }
+
+.water {
+  color: aqua;
+  text-shadow: 0 0 3px aqua;
+}
