@@ -5,11 +5,6 @@ const fireBtn = document.querySelector(".fire-btn");
 const result = document.createElement("div");
 const scoreBoard = document.createElement("div");
 
-// Add button text content
-rockButton.textContent = "Rock";
-paperButton.textContent = "Paper";
-scissorsButton.textContent = "Scissors";
-
 // Add children to their parent
 body.appendChild(rockButton);
 body.appendChild(paperButton);
