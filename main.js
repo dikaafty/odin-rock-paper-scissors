@@ -4,6 +4,8 @@ const earthBtn = document.querySelector(".earth-btn");
 const fireBtn = document.querySelector(".fire-btn");
 const resultDesc = document.querySelector(".choose-weapon");
 const resultBeat = document.querySelector(".beat");
+const scoreBoardPlayer = document.querySelector(".player-score");
+const scoreBoardCom = document.querySelector(".com-score");
 
 // Write the logic to get computer choice
 
@@ -64,7 +66,8 @@ function playRound(humanChoice, computerChoice) {
     result.textContent = "Invalid input"; // Handle invalid inputs
   }
 
-  scoreBoard.textContent = `You : ${humanScore} Computer : ${computerScore}`;
+  scoreBoardPlayer.textContent = humanScore;
+  scoreBoardCom.textContent = computerScore;
 }
 
 // Add event listener
