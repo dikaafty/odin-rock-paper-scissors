@@ -85,8 +85,21 @@ header h1 {
 }
 
 .button-container button {
-  padding: 70px;
+  padding: 50px;
   background-color: #201f1f;
   border: none;
   border-radius: 10px;
+}
+
+#water-icon {
+  width: 42px;
+}
+
+#water-icon, 
+#fire-icon {
+  font-size: 50px;
+}
+
+#earth-icon {
+  font-size: 42px;
 }
