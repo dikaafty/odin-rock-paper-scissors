@@ -19,3 +19,9 @@ header {
   height: 120px;
   background-color: #090909;
 }
+
+header h1 {
+  font-size: 45px;
+  font-family: "Press Start 2P";
+  font-weight: bold;
+}
