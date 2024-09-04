@@ -8,6 +8,9 @@ const scoreBoardPlayer = document.querySelector(".player-score");
 const scoreBoardCom = document.querySelector(".com-score");
 const playerSign = document.getElementById("player-sign");
 const comSign = document.getElementById("com-sign");
+const popup = document.querySelector(".popup");
+const popupCondition = document.querySelector(".condition");
+const restartBtn = document.querySelector(".restart-btn");
 let currentSound = null;
 
 // Write the logic to get computer choice
@@ -42,6 +45,32 @@ function playSound(soundFile) {
   }
   currentSound = new Audio(soundFile);
   currentSound.play();
+}
+
+// Logic For Open Popup
+function openPopup() {
+  if(humanScore === 5 || computerScore === 5) {
+    popup.classList.add("open-popup");
+  }
+}
+
+// Logic For Closing Popup
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
+
+// Reset Logic
+function reset() {
+  humanScore = 0;
+  computerScore = 0;
+  scoreBoardPlayer.textContent = humanScore;
+  scoreBoardCom.textContent = computerScore;
+  resultDesc.textContent = "Choose Your Weapon";
+  resultBeat.textContent = "Who scores 5 points first win the game!";
+  playerSign.setAttribute("class", "fa-solid fa-question");
+  comSign.setAttribute("class", "fa-solid fa-question");
+  playerSign.setAttribute("style", "color: #ffffff;");
+  comSign.setAttribute("style", "color: #ffffff;");
 }
 
 // Write the logic to play a single round
@@ -79,6 +108,15 @@ function playRound(humanChoice, computerChoice) {
   scoreBoardPlayer.textContent = humanScore;
   scoreBoardCom.textContent = computerScore;
   updateChoices(humanChoice, computerChoice);
+
+  // Declare The Winner
+  if(humanScore === 5) {
+    popupCondition.textContent = "You Won!";
+    openPopup();
+  } else if(computerScore === 5) {
+    popupCondition.textContent = "You Lost!";
+    openPopup();
+  }
 }
 
 // Add Update Image Choices
@@ -126,4 +164,8 @@ earthBtn.addEventListener("click", () => {
 fireBtn.addEventListener("click", () => {
   playSound("sounds/fire.mp3")
   playRound("Fire")
+});
+restartBtn.addEventListener("click", () => {
+  closePopup();
+  reset();
 });
