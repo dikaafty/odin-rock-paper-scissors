@@ -113,9 +113,11 @@ function playRound(humanChoice, computerChoice) {
   if(humanScore === 5) {
     popupCondition.textContent = "You Won!";
     openPopup();
+    playSound("sounds/win.mp3");
   } else if(computerScore === 5) {
     popupCondition.textContent = "You Lost!";
     openPopup();
+    playSound("sounds/lose.mp3");
   }
 }
 
