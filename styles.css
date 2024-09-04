@@ -128,6 +128,17 @@ footer p {
   font-size: 20px;
 }
 
+.fa-github {
+  color: white;
+  font-size: 25px;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(-360deg) scale(1.2);
+}
+
 .popup {
   width:300px;
   background-color: #090909;
