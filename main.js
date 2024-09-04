@@ -8,6 +8,7 @@ const scoreBoardPlayer = document.querySelector(".player-score");
 const scoreBoardCom = document.querySelector(".com-score");
 const playerSign = document.getElementById("player-sign");
 const comSign = document.getElementById("com-sign");
+let currentSound = null;
 
 // Write the logic to get computer choice
 
@@ -31,6 +32,16 @@ let computerScore = 0;
 // For Capitalize First Letter
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
+// Logic For Button Click Sound
+function playSound(soundFile) {
+  if(currentSound) {
+    currentSound.pause(); // Stop Current Sound
+    currentSound.currentTime = 0; // Reset Playback Position
+  }
+  currentSound = new Audio(soundFile);
+  currentSound.play();
 }
 
 // Write the logic to play a single round
@@ -118,6 +129,15 @@ function updateChoices(humanChoice, computerChoice) {
 }
 
 // Add event listener
-waterBtn.addEventListener("click", () => playRound("Water"));
-earthBtn.addEventListener("click", () => playRound("Earth"));
-fireBtn.addEventListener("click", () => playRound("Fire"));
+waterBtn.addEventListener("click", () => {
+  playSound("sounds/water.mp3")
+  playRound("Water")
+});
+earthBtn.addEventListener("click", () => {
+  playSound("sounds/earth.mp3")
+  playRound("Earth")
+});
+fireBtn.addEventListener("click", () => {
+  playSound("sounds/fire.mp3")
+  playRound("Fire")
+});
