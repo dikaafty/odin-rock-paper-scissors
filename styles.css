@@ -67,7 +67,8 @@ header h1 {
   text-align: center;
 }
 
-#sign {
+#player-sign,
+#com-sign {
   font-size: 80px;
   margin-bottom: 30px;
   text-shadow: 0 0 3px white;
@@ -89,6 +90,7 @@ header h1 {
   background-color: #201f1f;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-container button:hover {
