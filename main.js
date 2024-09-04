@@ -89,24 +89,30 @@ function updateChoices(humanChoice, computerChoice) {
   switch(humanChoice) {
     case "water":
       playerSign.setAttribute("class", "fa-solid fa-droplet")
+      playerSign.setAttribute("style", "color: aqua;");
       break
     case "earth":
       playerSign.setAttribute("class", "fa-solid fa-earth-europe")
+      playerSign.setAttribute("style", "color: rgb(0, 255, 0);")
       break
     case "fire":
       playerSign.setAttribute("class", "fa-solid fa-fire")
+      playerSign.setAttribute("style", "color: red;")
       break
   }
 
   switch(computerChoice) {
     case "water":
       comSign.setAttribute("class", "fa-solid fa-droplet")
+      comSign.setAttribute("style", "color: aqua;");
       break
     case "earth":
       comSign.setAttribute("class", "fa-solid fa-earth-europe")
+      comSign.setAttribute("style", "color: rgb(0, 255, 0);")
       break
     case "fire":
       comSign.setAttribute("class", "fa-solid fa-fire")
+      comSign.setAttribute("style", "color: red;")
       break
   }
 }
