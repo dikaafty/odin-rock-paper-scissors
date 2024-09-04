@@ -53,41 +53,27 @@ function playRound(humanChoice, computerChoice) {
   computerChoice = computerSelection.toLowerCase();
 
   // Check for the winning conditions
-  if (humanChoice === "water" && computerChoice === "fire") {
+  if(humanChoice === computerChoice) {
+    resultDesc.textContent = "Tie!";
+    resultBeat.textContent = `both chose ${capitalizeFirstLetter(humanChoice)}`;
+  } else if (
+    humanChoice === "water" && computerChoice === "fire" ||
+    humanChoice === "earth" && computerChoice === "water" ||
+    humanChoice === "fire" && computerChoice === "earth"
+  ) {
     resultDesc.textContent = "You won!";
     resultBeat.textContent = `${capitalizeFirstLetter(humanChoice)} beats
      ${capitalizeFirstLetter(computerChoice)}`;
     humanScore++;
-  } else if (humanChoice === "earth" && computerChoice === "water") {
-    resultDesc.textContent = "You won!";
-    resultBeat.textContent = `${capitalizeFirstLetter(humanChoice)} beats 
-    ${capitalizeFirstLetter(computerChoice)}`;
-    humanScore++;
-  } else if (humanChoice === "fire" && computerChoice === "earth") {
-    resultDesc.textContent = "You won!";
-    resultBeat.textContent = `${capitalizeFirstLetter(humanChoice)} beats 
-    ${capitalizeFirstLetter(computerChoice)}`;
-    humanScore++;
-  } else if (humanChoice === "water" && computerChoice === "earth") {
+  } else if(
+    humanChoice === "water" && computerChoice === "earth" ||
+    humanChoice === "earth" && computerChoice === "fire" ||
+    humanChoice === "fire" && computerChoice === "water"
+  ) {
     resultDesc.textContent = "You lost!";
     resultBeat.textContent = `${capitalizeFirstLetter(humanChoice)} is beaten by
      ${capitalizeFirstLetter(computerChoice)}`;
     computerScore++;
-  } else if (humanChoice === "earth" && computerChoice === "fire") {
-    resultDesc.textContent = "You lost!";
-    resultBeat.textContent = `${capitalizeFirstLetter(humanChoice)} is beaten by
-     ${capitalizeFirstLetter(computerChoice)}`;
-    computerScore++;
-  } else if (humanChoice === "fire" && computerChoice === "water") {
-    resultDesc.textContent = "You lost!";
-    resultBeat.textContent = `${capitalizeFirstLetter(humanChoice)} is beaten by
-     ${capitalizeFirstLetter(computerChoice)}`;
-    computerScore++;
-  } else if (humanChoice === computerChoice) {
-    resultDesc.textContent = "Tie!";
-    resultBeat.textContent = `both chose ${capitalizeFirstLetter(humanChoice)}`;
-  } else {
-    result.textContent = "Invalid input"; // Handle invalid inputs
   }
 
   scoreBoardPlayer.textContent = humanScore;
